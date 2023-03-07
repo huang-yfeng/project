@@ -12,6 +12,8 @@
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
+    "redis": "^4.6.5",
+    "redis-connector": "^0.0.0-deprecate",
     "winston": "^3.8.2"
   }
 }

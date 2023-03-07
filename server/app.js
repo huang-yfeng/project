@@ -8,6 +8,7 @@ const logger = require('./logger')
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const { Session } = require('inspector');
 
 const app = express();
 
@@ -55,5 +56,18 @@ const errorHandler = (err, req, res, next) => {
 }
 
 app.use(errorHandler)
+
+//
+// app.use(Session({
+//   store: new RedisStore({
+//     host: "localhost",
+//     port: "",
+//     db: ""
+//   }),
+//   esave: false,
+//   saveUninitialized: true,
+//   secret: 'keyboard cat',
+//   cookie: { maxAge: 100000 }
+// }))
 
 module.exports = app;
